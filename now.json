@@ -1,7 +1,13 @@
 {
+  "name": "Personal Site",
+  "version": 1,
+  "alias": [
+    "devinmarieb.com",
+    "www.devinmarieb.com"
+  ],
+  "public": false,
   "builds": [
     { "src": "*.html", "use": "@now/static" },
     { "src": "*.css", "use": "@now/static" }
-
   ]
 }

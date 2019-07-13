@@ -1,0 +1,73 @@
+#canvas {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.header {
+  color: #400c60;
+  font-size: 28px;
+  font-weight: bold;
+  font-family: 'Poiret One', cursive;
+}
+
+.job {
+  font-size: 23px;
+}
+
+.sub-header {
+  color: #400c60;
+  font-size: 16px;
+  width: 50%;
+  max-width: 900px;
+  min-width: 400px;
+  line-height: 1.2;
+  font-family: 'Raleway', sans-serif;
+}
+
+.title {
+  font-weight: bold;
+}
+.link {
+ margin: 0;
+ margin-bottom: 10px;
+}
+
+.atag {
+  color: #400c60;
+  font-family: 'Raleway', sans-serif;
+  text-decoration: none;
+  border-bottom: 1px solid #400c60;
+}
+
+.turing {
+  color: #400c60;
+  text-decoration: none;
+  font-style: italic;
+}
+
+.logo-container {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 75px;
+  height: 35px;
+}
+
+.logo-placement {
+  position: absolute;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  border: 2px solid black;
+}
+
+.logo-placement-two {
+  position: absolute;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  border: 2px solid black;
+}

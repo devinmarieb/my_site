@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <link href="https://fonts.googleapis.com/css?family=Abel|Comfortaa|Raleway|Poiret+One&display=swap" rel="stylesheet">
+    <canvas id="canvas" resize></canvas>
+
+    <p class="header">
+      DEVIN BELIVEAU <br/>
+      <span class="job">frontend developer</span>
+    </p>
+
+    <p class="sub-header">
+      <span class="title">A brief history:</span>
+      I grew up, went to college, and spent my twenties in various places around New England. I needed something new. I moved to Colorado to “settle down” and find a new career. I ended up at the <a class="turing" target="_blank" href="https://turing.io/">Turing School of Software & Design</a> and studied frontend development. Settling down didn’t work out. I finished my program and moved to Amsterdam to work in the creative studio at WeTransfer where I build interactive ads, mini sites and email templates.
+    </p>
+
+    <p class="sub-header">Some projects and recognition:</p>
+    <p class="link"><a class="atag" target="_blank" href="https://wepresent.wetransfer.com/story/wetransfer-craig-taylor-anything-but-guns/#/">Craig Taylor</a></p>
+    <p class="link"><a class="atag" target="_blank" href="https://designawards.core77.com/Design-for-Social-Impact/86680/WeTransfer-Against-Gun-Violence">WeTransfer against gun violence award</a></p>
+    <p class="link"><a class="atag" target="_blank" href="https://wepresent.wetransfer.com/story/ideas-report-2018/#/">Ideas Report 2018</a></p>
+    <p class="link"><a class="atag" target="_blank" href="https://wepresent.wetransfer.com/story/union-of-concerned-photographers/">Union of Concerned Photographers</a></p>
+    <p class="link"><a class="atag" target="_blank" href="https://reallygoodemails.com/?s=wetransfer">WePresent Newsletter</a></p>
+
+    <div class="logo-container">
+      <div class="logo-placement"></div>
+      <div class="logo-placement-two"></div>
+    </div>
+
+<script type="text/paperscript" canvas="canvas">
+    var width, height, center;
+    var points = 15;
+    var smooth = false;
+    var path = new Path();
+    var mousePos = view.center / 2;
+    var pathHeight = mousePos.y;
+    path.fillColor = 'lavender';
+    initializePath();
+
+    function initializePath() {
+    	center = view.center;
+    	width = view.size.width;
+    	height = view.size.height / 1.2;
+    	path.segments = [];
+    	path.add(view.bounds.bottomLeft);
+    	for (var i = 1; i < points; i++) {
+    		var point = new Point(width / points * i, center.y);
+    		path.add(point);
+    	}
+    	path.add(view.bounds.bottomRight);
+    }
+
+    function onFrame(event) {
+    	pathHeight += (center.y - mousePos.y - pathHeight) / 10;
+    	for (var i = 1; i < points; i++) {
+    		var sinSeed = event.count + (i + i % 10) * 100;
+    		var sinHeight = Math.sin(sinSeed / 200) * pathHeight;
+    		var yPos = Math.sin(sinSeed / 100) * sinHeight + height;
+    		path.segments[i].point.y = yPos;
+    	}
+    }
+
+    function onMouseMove(event) {
+    	mousePos = event.point;
+    }
+
+    function onResize(event) {
+    	initializePath();
+    }
+  </script>
+  </body>
+</html>

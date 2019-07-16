@@ -1,73 +1,78 @@
+body,
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-size: 18px;
+}
+
+#container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.header {
+  margin: 5% 0 2% 0;
+  color: #400c60;
+  font-size: 80px;
+  font-size: 5em;
+  font-weight: bold;
+  font-family: 'Poiret One';
+  text-align: center;
+}
+
+.job {
+  display: block;
+  font-size: 34px;
+  font-size: 3rem;
+}
+
+.sub-header {
+  margin: 0;
+  padding: 0;
+  color: #400c60;
+  font-size: 16px;
+  font-size: 1.5em;
+  font-size: 5vmin;
+  line-height: 1.2;
+  font-family: 'Raleway';
+  text-align: center;
+}
+
+.portland { opacity: .2; }
+.burlington { opacity: .3; }
+.brisbane { opacity: .4; }
+.boston { opacity: .6; }
+.denver { opacity: .8; }
+
+.contact-container {
+  position: absolute;
+  bottom: 7px;
+  right: 7px;
+}
+
+.link {
+  text-decoration: none;
+  font-family: 'Raleway';
+  font-size: 20px;
+  font-size: 1.2em;
+  opacity: .5;
+  transition: opacity .3s ease;
+}
+
+.link:hover {
+  opacity: 1;
+}
+
 #canvas {
   position: absolute;
   bottom: 0;
   width: 100%;
   height: 100%;
   z-index: -1;
-}
-
-.header {
-  color: #400c60;
-  font-size: 28px;
-  font-weight: bold;
-  font-family: 'Poiret One', cursive;
-}
-
-.job {
-  font-size: 23px;
-}
-
-.sub-header {
-  color: #400c60;
-  font-size: 16px;
-  width: 50%;
-  max-width: 900px;
-  min-width: 400px;
-  line-height: 1.2;
-  font-family: 'Raleway', sans-serif;
-}
-
-.title {
-  font-weight: bold;
-}
-.link {
- margin: 0;
- margin-bottom: 10px;
-}
-
-.atag {
-  color: #400c60;
-  font-family: 'Raleway', sans-serif;
-  text-decoration: none;
-  border-bottom: 1px solid #400c60;
-}
-
-.turing {
-  color: #400c60;
-  text-decoration: none;
-  font-style: italic;
-}
-
-.logo-container {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 75px;
-  height: 35px;
-}
-
-.logo-placement {
-  position: absolute;
-  left: 0;
-  width: 30px;
-  height: 30px;
-  border: 2px solid black;
-}
-
-.logo-placement-two {
-  position: absolute;
-  right: 0;
-  width: 30px;
-  height: 30px;
-  border: 2px solid black;
 }

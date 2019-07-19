@@ -33,6 +33,10 @@ html {
   font-size: 3rem;
 }
 
+.place-link{
+  text-decoration: none;
+}
+
 .sub-header {
   margin: 0;
   padding: 0;
@@ -43,10 +47,6 @@ html {
   line-height: 1.2;
   font-family: 'Raleway';
   text-align: center;
-}
-
-.place-link{
-  text-decoration: none;
 }
 
 .portland { opacity: .2; }

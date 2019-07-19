@@ -60,13 +60,13 @@ html {
 .brisbane:hover { opacity: .6; }
 
 .boston { opacity: .6; }
-.boston:hover { opacity: .7; }
+.boston:hover { opacity: .5; }
 
 .denver { opacity: .7; }
-.denver:hover { opacity: .8; }
+.denver:hover { opacity: .6; }
 
 .amsterdam { opacity: .8; }
-.amsterdam:hover { opacity: 1; }
+.amsterdam:hover { opacity: .7; }
 
 .contact-container {
   position: absolute;

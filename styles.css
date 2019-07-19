@@ -33,10 +33,6 @@ html {
   font-size: 3rem;
 }
 
-.place-link{
-  text-decoration: none;
-}
-
 .sub-header {
   margin: 0;
   padding: 0;
@@ -49,6 +45,11 @@ html {
   text-align: center;
 }
 
+.place-link{
+  text-decoration: none;
+  color:inherit;
+}
+
 .portland { opacity: .2; }
 .portland:hover { opacity: .3; }
 
@@ -59,13 +60,13 @@ html {
 .brisbane:hover { opacity: .6; }
 
 .boston { opacity: .6; }
-.boston { opacity: .7; }
+.boston { opacity: .5; }
 
 .denver { opacity: .7; }
-.denver { opacity: .8; }
+.denver { opacity: .6; }
 
 .amsterdam { opacity: .8; }
-.amsterdam { opacity: 1; }
+.amsterdam { opacity: .7; }
 
 .contact-container {
   position: absolute;

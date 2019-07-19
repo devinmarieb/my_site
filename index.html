@@ -41,7 +41,6 @@
         var path = new Path();
         var mousePos = view.center / 2;
         var pathHeight = mousePos.y;
-        // path.fillColor = 'lavender';
         path.fillColor = getColor();
         initializePath();
 
@@ -78,7 +77,7 @@
 
         function getColor() {
           var header = document.querySelector('.header');
-          var subHeader = document.querySelector('.sub-header');
+          var subHeader = document.querySelector('.place-link');
           var link = document.querySelector('.link');
           var textArray = [header, subHeader, link];
           var colors = [

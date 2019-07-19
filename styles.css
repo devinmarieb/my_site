@@ -45,11 +45,27 @@ html {
   text-align: center;
 }
 
+.place-link{
+  text-decoration: none;
+}
+
 .portland { opacity: .2; }
-.burlington { opacity: .3; }
-.brisbane { opacity: .4; }
+.portland:hover { opacity: .3; }
+
+.burlington { opacity: .4; }
+.burlington:hover { opacity: .5; }
+
+.brisbane { opacity: .5; }
+.brisbane:hover { opacity: .6; }
+
 .boston { opacity: .6; }
+.boston { opacity: .7; }
+
 .denver { opacity: .8; }
+.denver { opacity: .9; }
+
+.amsterdam { opacity: .9; }
+.amsterdam { opacity: 1; }
 
 .contact-container {
   position: absolute;
@@ -76,5 +92,4 @@ html {
   bottom: 0;
   width: 100%;
   height: 100%;
-  /* z-index: -1; */
 }

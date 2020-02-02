@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>DevinBeliveau</title>
+    <meta id="viewport" name="viewport" content ="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <link href="https://fonts.googleapis.com/css?family=Raleway|Poiret+One" rel="stylesheet">
     <link href="./styles.css" rel="stylesheet">
   </head>
@@ -134,6 +135,7 @@
       </div>
     </div>
   </body>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
   <script type="text/javascript">
     var values = [
       { value: '1167.38 817.03 1204.32 703.5 1384.55 655.74 1472.86 735.93 1443.12 884.62 1386.35 917.06 1440.41 941.39 1401.67 1063.04 1418.79 1080.16 1314.26 1118.01 1269.2 1127.92 1319.67 1249.57 1260.19 1348.69 1287.23 1413.57 1218.74 1437 1236.76 1325.26 978.14 1263.09 870.91 1306.34 784.4 1287.41 910.56 1085.57 999.77 976.53 1033.11 811.63 1059.24 727.83 1173.69 671.05 1353.01 632.31 1347.6 651.23 1160.17 697.19 1052.04 811.63 1101.6 811.63 1140.35 865.7 1083.58 971.13 1193.51 885.52 1167.38 817.03' },
@@ -191,6 +193,10 @@
 
     hoverStates.map(function(el) {
       el.addEventListener('mouseenter', function() {
+        var hovered = this.getAttribute('id');
+        setElements(hovered);
+      });
+      el.addEventListener('click', function() {
         var hovered = this.getAttribute('id');
         setElements(hovered);
       });
@@ -260,5 +266,4 @@
       });
     }
   </script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
 </html>

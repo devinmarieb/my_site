@@ -10,87 +10,117 @@ html {
 }
 
 #container {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 98%;
-}
-
-.header {
-  margin: 5% 0 2% 0;
-  color: #400c60;
-  font-size: 80px;
-  font-size: 5em;
-  font-weight: normal;
-  font-family: 'Poiret One';
-  text-align: center;
-}
-
-.job {
-  display: block;
-  font-size: 34px;
-  font-size: 3rem;
-}
-
-.sub-header {
-  margin: 0;
-  padding: 0;
-  color: #400c60;
-  font-size: 16px;
-  font-size: 1.5em;
-  font-size: 5vmin;
-  line-height: 1.2;
-  font-family: 'Raleway';
-  text-align: center;
-}
-
-.place-link{
-  text-decoration: none;
-  color:inherit;
-}
-
-.portland { opacity: .2; }
-.portland:hover { opacity: .3; }
-
-.burlington { opacity: .4; }
-.burlington:hover { opacity: .5; }
-
-.brisbane { opacity: .5; }
-.brisbane:hover { opacity: .6; }
-
-.boston { opacity: .6; }
-.boston:hover { opacity: .7; }
-
-.denver { opacity: .7; }
-.denver:hover { opacity: .8; }
-
-.amsterdam { opacity: .8; }
-.amsterdam:hover { opacity: 1; }
-
-.contact-container {
-  position: absolute;
-  bottom: 7px;
-  right: 7px;
-}
-
-.link {
-  text-decoration: none;
-  font-family: 'Raleway';
-  font-size: 20px;
-  font-size: 1.2em;
-  font-size: 2vmax;
-  opacity: .5;
-  transition: opacity .3s ease;
-}
-
-.link:hover {
-  opacity: 1;
-}
-
-#canvas {
-  position: absolute;
-  bottom: 0;
   width: 100%;
   height: 100%;
+  display: flex;
+}
+
+#left-container,
+#right-container {
+  position: relative;
+  width: 50%;
+  height: 100%;
+}
+
+.devin { fill: #400c60; opacity: 1 }
+.beliveau { fill: #400c60; opacity: 1 }
+.frontend { fill: #400c60; opacity: 1 }
+.developer { fill: #400c60; opacity: 1 }
+
+.maine { fill: #400c60;  opacity: 1 }
+.maine:hover { opacity: .7; }
+
+.vermont { fill: #400c60;  opacity: 1 }
+.vermont:hover { opacity: .7; }
+
+.australia { fill: #400c60;  opacity: 1 }
+.australia:hover { opacity: .7; }
+
+.boston { fill: #400c60;  opacity: 1 }
+.boston:hover { opacity: .7; }
+
+.denver { fill: #400c60;  opacity: 1 }
+.denver:hover { opacity: .7; }
+
+.amsterdam { fill: #ff6666;  opacity: .7; }
+.amsterdam:hover { opacity: 1; }
+
+.link {
+  position: absolute;
+  bottom: 1%;
+  right: 1%;
+  text-decoration: none;
+  font-family: 'Raleway';
+  font-size: 14px;
+  font-size: 1.5em;
+  font-size: 4vmin;
+  transition: opacity .3s ease;
+  color: #400c60;
+}
+
+.link:hover { fill: #ff6666; }
+
+.svg {
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  width: 120vh;
+  max-width: 60vw;
+  max-height: 100vh;
+}
+
+.place-text { pointer-events: none; }
+
+.polygon {
+  stroke: #400c60;
+  stroke-width: 3;
+}
+
+.about-text {
+  position: absolute;
+  top: 45%;
+  left: 55%;
+  width: 70%;
+  transform: translate(-50%, -50%);
+  font-family: Raleway;
+  font-size: 20px;
+  font-size: 1em;
+  color: #400c60;
+  line-height: 1.3;
+}
+
+a { color: #400c60; }
+a:hover { color: #ff6666; }
+
+@media (max-width: 950px) {
+  .about-text {
+    font-size: 14px;
+    font-size: .8em;
+  }
+}
+
+@media (max-width: 550px) {
+  body,
+  html {
+    overflow: scroll;
+    min-height: 600px;
+  }
+  #container {
+    flex-direction: column;
+    align-items: center;
+  }
+  #left-container,
+  #right-container {
+    width: 100%;
+    height: 50%;
+  }
+  .svg {
+    top: 5%;
+    left: 55%;
+    transform: translate(-50%, 0);
+  }
+  .about-text {
+    top: 50%;
+    left: 50%;
+  }
 }

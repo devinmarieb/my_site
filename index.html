@@ -315,7 +315,7 @@
     </div>
   </body>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
-  <script type="text/javascript" src="https://d3js.org/d3.v3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.15.1/d3.min.js"></script>
   <script type="text/javascript">
     var values = [
       { value: '391.53 220.53 412.26 156.82 513.4 130.03 562.95 175.02 546.26 258.46 514.41 276.66 544.74 290.31 523 358.57 532.61 368.18 473.95 389.42 448.67 394.98 476.99 463.24 443.61 518.86 458.79 555.27 420.35 568.41 430.47 505.71 285.35 470.83 225.18 495.1 176.63 484.48 247.42 371.22 297.48 310.03 316.19 217.5 330.85 170.48 395.07 138.62 495.7 116.88 492.66 127.49 387.49 153.28 326.81 217.5 354.62 217.5 376.37 247.84 344.51 307 406.2 258.96 391.53 220.53' },
@@ -493,7 +493,7 @@
         clusterPadding = 6,
         maxRadius = 30;
 
-    var color = d3.scale.ordinal()
+    var color = d3.scaleBand()
       .range(['#9c62d3','#0cc17b']);
 
     d3.text('word_groups.csv', function(error, text) {

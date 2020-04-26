@@ -159,27 +159,24 @@ html {
   line-height: 1.3;
 }
 
+.work-left {
+  padding: 0 5vw;
+  max-width: 900px;
+}
+
 .work-right {
   display: flex;
   justify-content: center;
+  display: none;
 }
 
 .work-link { color: #282828; }
 .work-link:hover { color: #0c7ff2; }
 
-#chart {
+/* #chart {
   position: relative;
   width: 95%;
-}
-
-.bubbles {
-  display: block;
-  width: 40vw;
-  max-width: 70vh;
-  min-width: 300px;
-  margin: 0 auto;
-}
-
+} */
 /* #bubbles {
   width: 90%;
   max-width: 800px;

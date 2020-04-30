@@ -418,6 +418,39 @@
             break;
         }
       });
+      el.addEventListener('touchstart', function() {
+        var hovered = this.getAttribute('id');
+        placeText.map(function(el) {
+          el.style.fill = '#282828';
+        })
+        setElements(hovered);
+        switch(hovered) {
+          case 'maine-rect':
+            document.getElementById('maine').style.fill = '#0c7ff2';
+            color = '#0c7ff2';
+            break;
+          case 'vermont-rect':
+            document.getElementById('vermont').style.fill = '#0cc17b';
+            color = '#0cc17b';
+            break;
+          case 'australia-rect':
+            document.getElementById('australia').style.fill = '#efc25e';
+            color = '#efc25e';
+            break;
+          case 'boston-rect':
+            document.getElementById('boston').style.fill = '#ef5e76';
+            color = '#ef5e76';
+            break;
+          case 'denver-rect':
+            document.getElementById('denver').style.fill = '#9c62d3';
+            color = '#9c62d3';
+            break;
+          case 'amsterdam-rect':
+            document.getElementById('amsterdam').style.fill = '#f97248';
+            color = '#f97248';
+            break;
+        }
+      });
     });
 
     anime({

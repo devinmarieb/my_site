@@ -5,27 +5,15 @@ html {
   margin: 0;
   padding: 0;
   background-color: #fcfcff;
+  overflow-x: hidden;
 }
 
-#container {
-  position: absolute;
-  top: 20%;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-}
-
+/* header */
 #top {
-  position: fixed;
   width: 100%;
-  height: 10%;
-  max-height: 250px;
-  min-height: 70px;
-  padding-bottom: 5%;
+  height: auto;
   display: flex;
   justify-content: space-between;
-  background-image: linear-gradient(white, white, white, white, white, rgba(255,255,255, 0));
-  z-index: 2;
 }
 
 .header {
@@ -57,22 +45,45 @@ html {
 .menu-rect:hover ~ .menu-text { fill: #238cf4; }
 .menu-rect:hover ~ .menu-line { stroke: #238cf4; }
 
+/* container */
+#container {
+  position: absolute;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  padding-top: 10vh;
+}
+
+/* dividers */
+.section {
+  width: 100vw;
+  padding-bottom: 1%;
+}
+
+.dash { stroke: #0c7ff2; }
+
+/* section one */
 #about {
   position: relative;
   width: 100vw;
-  padding-bottom: 10vh;
+  padding-bottom: 7vh;
   display: flex;
   height: 100vh;
 }
 
 #left-container {
-  position: absolute;
-  left: 55%;
-  transform: translateX(-50%);
   pointer-events: none;
-  width: 40%;
-  transition: all .7s linear;
   backface-visibility: hidden;
+}
+
+#animation {
+  box-sizing: content-box;
+  width: 70vh;
+  height: auto;
+  overflow: visible;
+  max-width: 35vw;
+  min-width: 350px;
+  padding-left: 3vh;
 }
 
 .place-text {
@@ -86,21 +97,9 @@ html {
 #australia-shape { opacity: 0; }
 #boston-shape { opacity: 0; }
 #colorado-shape { opacity: 0; }
-#netherlands-shape { opacity: .3; }
-
-#animation {
-  box-sizing: content-box;
-  width: 70vh;
-  height: auto;
-  overflow: visible;
-  max-width: 40vw;
-  min-width: 350px;
-  padding-left: 2vh;
-}
+#netherlands-shape { opacity: .8; }
 
 #right-container {
-  width: 60%;
-  padding: 2vh 2vh 0 2vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -109,7 +108,6 @@ html {
 .about-text {
   font-family: Raleway;
   font-size: 18px;
-  /* font-size: 1.1rem; */
   color: #282828;
   line-height: 1.3;
   width: 75%;
@@ -125,27 +123,9 @@ html {
 .about-link-denver:hover { color: #9c62d3; }
 .about-link-amsterdam:hover { color: #f97248; }
 
-.section {
-  width: 100vw;
-  padding-bottom: 1%;
-}
 
-.dash { stroke: #0c7ff2; }
-
-.section-one {
-  opacity: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-}
-
-#work {
-  position: relative;
-  display: flex;
-  height: auto;
-  padding: 10vh 0;
-  justify-content: center;
-  align-items: center;
-}
+/* section two */
+#work { padding: 5vh 0; }
 
 .work-left,
 .work-right {
@@ -154,13 +134,12 @@ html {
   padding: 2vh 3vh;
   color: #282828;
   font-family: Raleway;
-  font-size: 16px;
-  font-size: 1.1rem;
+  font-size: 18px;
   line-height: 1.3;
 }
 
 .work-left {
-  padding: 0 5vw;
+  margin: 0 auto;
   max-width: 900px;
 }
 
@@ -209,40 +188,24 @@ text {
 .contact-line { fill: #282828; }
 
 @media (max-width: 960px) {
-  #work {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
   .work-right,
   .work-left {
     display: block;
-    width: 95%;
     margin: 0 auto;
-    /* padding: 3vh; */
   }
 }
 
 @media (max-width: 700px) {
   .about-text,
-  .work-left {
-    font-size: 14px;
-    /* font-size: .8em; */
-  }
+  .work-left { font-size: 16px; }
 }
 
-@media (max-width: 450px) {
-  .header { min-width: 160px; }
-  .menu {
-    width: 60%;
-    min-width: 160px;
-  }
+@media (max-width: 650px) {
   #top {
-    min-height: 30px;
-    padding-bottom: 1%;
+    display: block;
+    padding: 3vh;
   }
-  #container { top: 14%; }
+  #container {padding-top: 5vh;}
   #about {
     flex-direction: column;
     justify-content: center;
@@ -250,39 +213,42 @@ text {
     padding-bottom: 5vh;
     height: auto;
   }
-  #work {
-    padding: 3vh 0;
+  #left-container {
+    position: relative;
+    width: 100%;
   }
   #animation {
     width: 50vh;
-    max-width: 23vw;
-    min-width: 200px;
+    max-width: 25vw;
     padding-bottom: 2vh;
-  }
-  #left-container {
-    position: relative;
-    margin: -2vh 0 0 -7vh;
-    left: 0;
-    transform: translateX(0);
+    min-width: 300px;
   }
   #right-container {
-    width: 95%;
+    width: 100%;
     padding: 0;
   }
-  .about-text,
-  .work-left {
-    font-size: 14px;
-    /* font-size: .6em; */
-  }
   .about-text {
-    width: 90%;
+    width: 100%;
+    padding: 2vh 3vh;
+  }
+  .header,
+  .menu {
+    display: block;
+    padding: 0 0 1vh 0;
+  }
+  .menu {
+    width: 55%;
+    min-width: 160px;
+
+  }
+  .header {
+    margin-bottom: 0;
+    width: 75%;
+    min-width: 160px;
   }
 }
 
 @media (min-width: 1950px) {
   .about-text,
-  .work-left {
-    font-size: 20px;
-    /* font-size: 1.4rem; */
-  }
+  .work-left { font-size: 20px; }
 }

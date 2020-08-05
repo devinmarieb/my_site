@@ -155,7 +155,7 @@ a:hover {
   pointer-events: none;
 }
 
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active){
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   .thenet {
     display: none;
   }

@@ -155,6 +155,12 @@ a:hover {
   pointer-events: none;
 }
 
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active){
+  .thenet {
+    display: none;
+  }
+}
+
 @media (max-width: 900px) {
   #header {
     flex-direction: column;

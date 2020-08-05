@@ -207,11 +207,13 @@ a:hover {
     margin-top: 70px;
   }
   #footer {
-    font-size: 1rem;
+    height: auto;
+    font-size: 1.8rem;
   }
   .email,
   .linkedin {
-    font-size: 1rem;
+    font-size: 1.2rem;
+    display: block;
   }
 }
 

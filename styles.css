@@ -60,6 +60,7 @@ a:hover {
 
 .active-menu {
   color: #00b8ff;
+  outline: none;
 }
 
 .copy {
@@ -177,6 +178,10 @@ a:hover {
     padding-top: 10vh;
   }
   .menu-item:hover {
+    color: #f9f1f1;
+    background-color: #00b8ff;
+  }
+  .active-menu {
     color: #f9f1f1;
     background-color: #00b8ff;
   }

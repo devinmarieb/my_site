@@ -14,9 +14,9 @@
         <p class="title">frontend developer</p>
       </aside>
       <aside class="menu">
-        <p class="menu-item active-menu menu-about">about me</p>
-        <p class="menu-item menu-work">my work</p>
-        <p class="menu-item menu-culture">culture fit</p>
+        <p tabindex="0" class="menu-item active-menu menu-about">about me</p>
+        <p tabindex="0" class="menu-item menu-work">my work</p>
+        <p tabindex="0" class="menu-item menu-culture">culture fit</p>
       </aside>
     </section>
 
@@ -84,14 +84,14 @@
 
     <section id="footer">
       <aside>
-        <span id="left-arrow" class="footer-item left-point left-arrow"><</span>
+        <span tabindex="0" id="left-arrow" class="footer-item left-point left-arrow"><</span>
         <span id="amsterdam-point" class="footer-item amsterdam-point footer-active">-</span>
         <span id="denver-point" class="footer-item denver-point inactive-point">-</span>
         <span id="boston-point" class="footer-item boston-point inactive-point">-</span>
         <span id="australia-point" class="footer-item australia-point inactive-point">-</span>
         <span id="vermont-point" class="footer-item vermont-point inactive-point">-</span>
         <span id="maine-point" class="footer-item maine-point inactive-point">-</span>
-        <span id="right-arrow" class="footer-item right-point rigt-arrow">></span>
+        <span tabindex="0" id="right-arrow" class="footer-item right-point rigt-arrow">></span>
         <a href="mailto:devinmarieb@gmail.com" class="footer-item email">Email</a>
         <a href="https://www.linkedin.com/in/devin-beliveau-2126448" target="_blank" class="footer-item linkedin">LinkedIn</a>
       </aside>
@@ -189,6 +189,20 @@
       menuAbout.classList.add('active-menu');
     })
 
+    menuAbout.addEventListener('keyup', function(e) {
+      if(e.keyCode === 13) {
+        window.scrollTo(0, 0);
+        copy.map(function(el) {
+          el.style.display = 'none';
+        })
+        menuItem.map(function(el) {
+          el.classList.remove('active-menu');
+        })
+        aboutText.style.display = 'block';
+        menuAbout.classList.add('active-menu');
+      }
+    })
+
     menuWork.addEventListener('click', function() {
       window.scrollTo(0, 0);
       copy.map(function(el) {
@@ -199,6 +213,20 @@
       })
       workText.style.display = 'block';
       menuWork.classList.add('active-menu');
+    })
+
+    menuWork.addEventListener('keyup', function(e) {
+      if(e.keyCode === 13) {
+        window.scrollTo(0, 0);
+        copy.map(function(el) {
+          el.style.display = 'none';
+        })
+        menuItem.map(function(el) {
+          el.classList.remove('active-menu');
+        })
+        workText.style.display = 'block';
+        menuWork.classList.add('active-menu');
+      }
     })
 
     menuCulture.addEventListener('click', function() {
@@ -213,6 +241,20 @@
       menuCulture.classList.add('active-menu');
     })
 
+    menuCulture.addEventListener('keyup', function(e) {
+      if(e.keyCode === 13) {
+        window.scrollTo(0, 0);
+        copy.map(function(el) {
+          el.style.display = 'none';
+        })
+        menuItem.map(function(el) {
+          el.classList.remove('active-menu');
+        })
+        cultureText.style.display = 'block';
+        menuCulture.classList.add('active-menu');
+      }
+    })
+
     hoverStates.map(function(el) {
       el.addEventListener('click', function() {
         var hovered = this.getAttribute('id');
@@ -221,6 +263,12 @@
       el.addEventListener('touchstart', function() {
         var hovered = this.getAttribute('id');
         setElements(hovered);
+      });
+      el.addEventListener('keyup', function(e) {
+        if(e.keyCode === 13) {
+          var hovered = this.getAttribute('id');
+          setElements(hovered);
+        }
       });
     });
 
